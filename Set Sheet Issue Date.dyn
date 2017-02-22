@@ -1,0 +1,32 @@
+<Workspace Version="1.0.0.1180" X="735.563892714658" Y="304.397964604458" zoom="0.811704797132223" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+  <NamespaceResolutionMap />
+  <Elements>
+    <DSRevitNodesUI.Categories guid="18bef9f1-42d6-456a-b866-432ffcb92ece" type="DSRevitNodesUI.Categories" nickname="Categories" x="135" y="263" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="400:Sheets" />
+    <DSRevitNodesUI.ElementsOfCategory guid="a9f52f38-33fd-4a0e-a4fe-2c8023fbf397" type="DSRevitNodesUI.ElementsOfCategory" nickname="All Elements of Category" x="352" y="266.5" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="443dc4cf-fe22-4eb4-932d-a386c961d049" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Element.SetParameterByName" x="625.5" y="258.5" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Element.SetParameterByName@string,var" />
+    <CoreNodeModels.Input.StringInput guid="5e9131bc-34ff-4c29-9681-0e02c1c6e70d" type="CoreNodeModels.Input.StringInput" nickname="String" x="391" y="342.5" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>Sheet Issue Date</System.String>
+      <System.String value="Sheet Issue Date" />
+    </CoreNodeModels.Input.StringInput>
+    <CoreNodeModels.Input.StringInput guid="4d0ae936-d480-42a7-8018-60ff4ea76b22" type="CoreNodeModels.Input.StringInput" nickname="Sheet Issue Date" x="135" y="447.5" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>NOT ISSUED</System.String>
+      <System.String value="NOT ISSUED" />
+    </CoreNodeModels.Input.StringInput>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="18bef9f1-42d6-456a-b866-432ffcb92ece" start_index="0" end="a9f52f38-33fd-4a0e-a4fe-2c8023fbf397" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a9f52f38-33fd-4a0e-a4fe-2c8023fbf397" start_index="0" end="443dc4cf-fe22-4eb4-932d-a386c961d049" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="5e9131bc-34ff-4c29-9681-0e02c1c6e70d" start_index="0" end="443dc4cf-fe22-4eb4-932d-a386c961d049" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="4d0ae936-d480-42a7-8018-60ff4ea76b22" start_index="0" end="443dc4cf-fe22-4eb4-932d-a386c961d049" end_index="2" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="7c4f1ee6-3ab5-4ee4-bfc0-12d84b432f27" annotationText="1. Field to edit" left="125" top="417.5" width="127" height="98" fontSize="14" InitialTop="447.5" InitialHeight="98" TextblockHeight="20" backgrouund="#FFC1D676">
+      <Models ModelGuid="4d0ae936-d480-42a7-8018-60ff4ea76b22" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>

@@ -1,0 +1,65 @@
+<Workspace Version="0.9.0.3067" X="75.2040319394436" Y="203.26498486648" zoom="0.443366721850649" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <DSRevitNodesUI.ElementsOfCategory guid="7b1083d0-317b-4f25-82b1-a54db6961508" type="DSRevitNodesUI.ElementsOfCategory" nickname="All Elements of Category" x="404.160431238383" y="32.6469355047473" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
+    <DSRevitNodesUI.Categories guid="49ffa8df-526d-4b3f-a1d5-6b2e52714372" type="DSRevitNodesUI.Categories" nickname="Categories" x="65.9650023118202" y="58.7624126419337" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" index="726:Rooms" />
+    <Dynamo.Nodes.DSFunction guid="5e90bc76-b24b-4341-aad8-266bfdc9361f" type="Dynamo.Nodes.DSFunction" nickname="Element.Name" x="681.578401303827" y="3.39645309835706" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="RevitNodes.dll" function="Revit.Elements.Element.Name" />
+    <Dynamo.Nodes.Watch guid="f208b7f5-fa39-465d-a0c6-c9d6df31fa33" type="Dynamo.Nodes.Watch" nickname="Watch" x="1173.0964414296" y="547.632246703261" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
+    <Dynamo.Nodes.Function guid="f7c20a2d-5e90-4e74-8d61-439e305921b7" type="Dynamo.Nodes.Function" nickname="Room.IsUnbounded" x="646.854310308913" y="109.568672525186" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False">
+      <ID value="8ef2655c-a185-4681-8bc1-4b21e8e26b9e" />
+      <Name value="Room.IsUnbounded" />
+      <Description value="Checks whether a room is unbounded." />
+      <Inputs>
+        <Input value="Room(s)" />
+      </Inputs>
+      <Outputs>
+        <Output value="bool" />
+      </Outputs>
+    </Dynamo.Nodes.Function>
+    <Dynamo.Nodes.DSFunction guid="9b520e88-80db-49a4-8803-0d6f9e2d719a" type="Dynamo.Nodes.DSFunction" nickname="List.FilterByBoolMask" x="930.893125094276" y="5.73283956176013" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]" />
+    <Dynamo.Nodes.DSFunction guid="8ac6860f-0e7f-4095-bed5-62683b69c766" type="Dynamo.Nodes.DSFunction" nickname="Element.Id" x="652.321999404704" y="586.872636044182" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="RevitNodes.dll" function="Revit.Elements.Element.Id" />
+    <Dynamo.Nodes.DSFunction guid="7cbacbc7-2044-4db7-8189-c97b997604e4" type="Dynamo.Nodes.DSFunction" nickname="List.FilterByBoolMask" x="951.43510266684" y="549.89789229621" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.List.FilterByBoolMask@var[]..[],var[]..[]" />
+    <Dynamo.Nodes.Watch guid="72537e3d-39b4-4f0f-9a35-3936b85f7c35" type="Dynamo.Nodes.Watch" nickname="Watch" x="1206.12851478584" y="8.64237358814327" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" />
+    <Dynamo.Nodes.DSFunction guid="e3ed5602-3afc-4b75-8a52-216c568e12a7" type="Dynamo.Nodes.DSFunction" nickname="CSV.WriteToFile" x="2176.52204276339" y="357.71481937554" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.IO.CSV.WriteToFile@string,var[][]" />
+    <Dynamo.Nodes.DSVarArgFunction guid="f029ff7c-dfd4-44ff-9981-f17db4fa61ba" type="Dynamo.Nodes.DSVarArgFunction" nickname="String.Join" x="1743.39732773875" y="367.406972592981" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" assembly="DSCoreNodes.dll" function="DSCore.String.Join@string,string[]" inputcount="3" />
+    <Dynamo.Nodes.CodeBlockNodeModel guid="468835cb-2e90-4e25-a217-84d487dfd9c9" type="Dynamo.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1541.73334339727" y="391.194335271862" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" CodeText="',';" ShouldFocus="false" />
+    <Dynamo.Nodes.Function guid="6d8a7fbd-9cbb-4850-9118-0f9c43df13a8" type="Dynamo.Nodes.Function" nickname="Flat List to List of Strings" x="1401.86290574112" y="528.295088740621" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False">
+      <ID value="82b8a446-c4a1-4d64-8736-01c0b01ae798" />
+      <Name value="Flat List to List of Strings" />
+      <Description value="using python methods" />
+      <Inputs>
+        <Input value="Original List" />
+      </Inputs>
+      <Outputs>
+        <Output value="List of Strings" />
+      </Outputs>
+    </Dynamo.Nodes.Function>
+    <DSCore.File.Filename guid="32f5afca-a1b3-4e2b-bc44-ac2b3a942d09" type="DSCore.File.Filename" nickname="File Path" x="1836.91230474652" y="145.375981124267" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True">
+      <System.String>T:\narsai-a\20151216 RLA_Unbound-Rooms.csv</System.String>
+    </DSCore.File.Filename>
+  </Elements>
+  <Connectors>
+    <Dynamo.Models.ConnectorModel start="7b1083d0-317b-4f25-82b1-a54db6961508" start_index="0" end="f7c20a2d-5e90-4e74-8d61-439e305921b7" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="7b1083d0-317b-4f25-82b1-a54db6961508" start_index="0" end="8ac6860f-0e7f-4095-bed5-62683b69c766" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="7b1083d0-317b-4f25-82b1-a54db6961508" start_index="0" end="5e90bc76-b24b-4341-aad8-266bfdc9361f" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="49ffa8df-526d-4b3f-a1d5-6b2e52714372" start_index="0" end="7b1083d0-317b-4f25-82b1-a54db6961508" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="5e90bc76-b24b-4341-aad8-266bfdc9361f" start_index="0" end="9b520e88-80db-49a4-8803-0d6f9e2d719a" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="f208b7f5-fa39-465d-a0c6-c9d6df31fa33" start_index="0" end="6d8a7fbd-9cbb-4850-9118-0f9c43df13a8" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="f7c20a2d-5e90-4e74-8d61-439e305921b7" start_index="0" end="9b520e88-80db-49a4-8803-0d6f9e2d719a" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="f7c20a2d-5e90-4e74-8d61-439e305921b7" start_index="0" end="7cbacbc7-2044-4db7-8189-c97b997604e4" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="9b520e88-80db-49a4-8803-0d6f9e2d719a" start_index="0" end="72537e3d-39b4-4f0f-9a35-3936b85f7c35" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="8ac6860f-0e7f-4095-bed5-62683b69c766" start_index="0" end="7cbacbc7-2044-4db7-8189-c97b997604e4" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="7cbacbc7-2044-4db7-8189-c97b997604e4" start_index="0" end="f208b7f5-fa39-465d-a0c6-c9d6df31fa33" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="72537e3d-39b4-4f0f-9a35-3936b85f7c35" start_index="0" end="f029ff7c-dfd4-44ff-9981-f17db4fa61ba" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="f029ff7c-dfd4-44ff-9981-f17db4fa61ba" start_index="0" end="e3ed5602-3afc-4b75-8a52-216c568e12a7" end_index="1" portType="0" />
+    <Dynamo.Models.ConnectorModel start="468835cb-2e90-4e25-a217-84d487dfd9c9" start_index="0" end="f029ff7c-dfd4-44ff-9981-f17db4fa61ba" end_index="0" portType="0" />
+    <Dynamo.Models.ConnectorModel start="6d8a7fbd-9cbb-4850-9118-0f9c43df13a8" start_index="0" end="f029ff7c-dfd4-44ff-9981-f17db4fa61ba" end_index="2" portType="0" />
+    <Dynamo.Models.ConnectorModel start="32f5afca-a1b3-4e2b-bc44-ac2b3a942d09" start_index="0" end="e3ed5602-3afc-4b75-8a52-216c568e12a7" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>

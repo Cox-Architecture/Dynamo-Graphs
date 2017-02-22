@@ -1,0 +1,64 @@
+<Workspace Version="1.0.0.1180" X="-60.6141428014537" Y="100.683682525121" zoom="0.541716480397303" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+  <NamespaceResolutionMap />
+  <Elements>
+    <CoreNodeModels.Input.StringInput guid="0ef6ca81-260e-4111-95c2-40da3f62a9d7" type="CoreNodeModels.Input.StringInput" nickname="String" x="324.138964657437" y="-47.8229354084197" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>Name</System.String>
+      <System.String value="Name" />
+    </CoreNodeModels.Input.StringInput>
+    <CoreNodeModels.Input.StringInput guid="a9976229-4ed7-4545-b19a-e384693d2a7a" type="CoreNodeModels.Input.StringInput" nickname="String" x="657.341442886066" y="377.0378463278" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>Room</System.String>
+      <System.String value="Room" />
+    </CoreNodeModels.Input.StringInput>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="0e69a723-9a2c-406a-9926-49b5c2bb1f00" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="bv Get Parameter Value as String" x="512.409869812117" y="191.578916268286" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <ID value="1cbca661-efcf-459b-b2f6-6c7b48de8da0" />
+      <Name value="bv Get Parameter Value as String" />
+      <Description value="forked from Rhythm" />
+      <Inputs>
+        <Input value="Parameter Name" />
+        <Input value="Element(s)" />
+      </Inputs>
+      <Outputs>
+        <Output value="Value" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <CoreNodeModels.Input.StringInput guid="3939823e-98b7-41e5-af50-c4b5ed078657" type="CoreNodeModels.Input.StringInput" nickname="String" x="732.103062091914" y="464.34441361796" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>Boom</System.String>
+      <System.String value="Boom" />
+    </CoreNodeModels.Input.StringInput>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="aa0db16b-08d5-4a27-84a5-26a4f99ce0f6" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="String.Replace" x="899.822125079786" y="178.562372259693" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.String.Replace@string,string,string" />
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="aff6da2f-cc3e-4bdc-a0af-473e5adfdf20" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Set List of Values to List of Elements for One Parameter" x="1164.15150257055" y="43.5472346101178" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <ID value="a3431d3e-7aa0-4789-ba3c-76466695e6f9" />
+      <Name value="Set List of Values to List of Elements for One Parameter" />
+      <Description value="as described" />
+      <Inputs>
+        <Input value="elementList" />
+        <Input value="parameterNameAsString" />
+        <Input value="valuesToSet" />
+      </Inputs>
+      <Outputs>
+        <Output value="elementsOut" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <CoreNodeModels.Watch guid="fb4f2d76-a251-4823-be90-eb5f1599831e" type="CoreNodeModels.Watch" nickname="Watch" x="285.583214196945" y="369.325204803981" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <DSRevitNodesUI.Categories guid="50a38214-72d7-4211-b39e-0e4d5299949c" type="DSRevitNodesUI.Categories" nickname="Categories" x="-246.71544346484" y="67.6892987956359" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="403:Rooms" />
+    <DSRevitNodesUI.ElementsOfCategory guid="d2da81a6-f66d-45f9-b22d-ce3fa813cbe3" type="DSRevitNodesUI.ElementsOfCategory" nickname="All Elements of Category" x="12.9817804246975" y="62.8502200896197" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="0ef6ca81-260e-4111-95c2-40da3f62a9d7" start_index="0" end="0e69a723-9a2c-406a-9926-49b5c2bb1f00" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0ef6ca81-260e-4111-95c2-40da3f62a9d7" start_index="0" end="aff6da2f-cc3e-4bdc-a0af-473e5adfdf20" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a9976229-4ed7-4545-b19a-e384693d2a7a" start_index="0" end="aa0db16b-08d5-4a27-84a5-26a4f99ce0f6" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0e69a723-9a2c-406a-9926-49b5c2bb1f00" start_index="0" end="aa0db16b-08d5-4a27-84a5-26a4f99ce0f6" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3939823e-98b7-41e5-af50-c4b5ed078657" start_index="0" end="aa0db16b-08d5-4a27-84a5-26a4f99ce0f6" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="aa0db16b-08d5-4a27-84a5-26a4f99ce0f6" start_index="0" end="aff6da2f-cc3e-4bdc-a0af-473e5adfdf20" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="50a38214-72d7-4211-b39e-0e4d5299949c" start_index="0" end="d2da81a6-f66d-45f9-b22d-ce3fa813cbe3" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d2da81a6-f66d-45f9-b22d-ce3fa813cbe3" start_index="0" end="fb4f2d76-a251-4823-be90-eb5f1599831e" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d2da81a6-f66d-45f9-b22d-ce3fa813cbe3" start_index="0" end="0e69a723-9a2c-406a-9926-49b5c2bb1f00" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d2da81a6-f66d-45f9-b22d-ce3fa813cbe3" start_index="0" end="aff6da2f-cc3e-4bdc-a0af-473e5adfdf20" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>

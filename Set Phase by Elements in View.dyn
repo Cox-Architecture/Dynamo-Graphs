@@ -1,0 +1,46 @@
+<Workspace Version="1.0.0.1180" X="12.285" Y="96.0749999999999" zoom="0.8425" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="False">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="6cf07132-d0f1-4202-935f-bae5f049a3b7" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="bv Elements in Views" x="447.032640949555" y="402.5" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <ID value="495f442f-6163-4504-ad84-ca89954fd982" />
+      <Name value="bv Elements in Views" />
+      <Description value="forked" />
+      <Inputs>
+        <Input value="Views" />
+      </Inputs>
+      <Outputs>
+        <Output value="Elements" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="60e62e69-c07c-4fd1-9d1d-db8043aaa939" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Active View" x="211.5" y="402.5" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <ID value="58849545-7510-4baf-99da-98c0b1e184fd" />
+      <Name value="Active View" />
+      <Description value="Selects the current document's active view. Supports more view types than the built-in option.&#xD;&#xA;Will be depreciated once the bult in node works with all plan types." />
+      <Inputs>
+        <Input value="refresh" />
+      </Inputs>
+      <Outputs>
+        <Output value="view" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="60d37635-f399-410e-aa2c-ff3817927b9b" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Element.SetParameterByName" x="779.928783382789" y="402.5" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Element.SetParameterByName@string,var" />
+    <CoreNodeModels.Input.StringInput guid="9e136621-cf84-4bed-bd98-cec743ee25e0" type="CoreNodeModels.Input.StringInput" nickname="String" x="525.032640949555" y="521.424332344214" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>Phase</System.String>
+      <System.String value="Phase" />
+    </CoreNodeModels.Input.StringInput>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="6134960a-b26e-4757-b77c-34c252c648d8" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="531.857566765579" y="596.20178041543" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Stage 1&quot;;" ShouldFocus="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="6cf07132-d0f1-4202-935f-bae5f049a3b7" start_index="0" end="60d37635-f399-410e-aa2c-ff3817927b9b" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="60e62e69-c07c-4fd1-9d1d-db8043aaa939" start_index="0" end="6cf07132-d0f1-4202-935f-bae5f049a3b7" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9e136621-cf84-4bed-bd98-cec743ee25e0" start_index="0" end="60d37635-f399-410e-aa2c-ff3817927b9b" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6134960a-b26e-4757-b77c-34c252c648d8" start_index="0" end="60d37635-f399-410e-aa2c-ff3817927b9b" end_index="2" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
